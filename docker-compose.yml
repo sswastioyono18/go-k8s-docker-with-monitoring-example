@@ -37,8 +37,7 @@ services:
       - ./loki/grafana/provisioning/:/etc/grafana/provisioning/
 
   app-image:
-    image: sactio1811/go-app-img:latest
-#    build:
-#      dockerfile: Dockerfile
+    build:
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
